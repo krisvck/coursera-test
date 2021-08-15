@@ -99,11 +99,16 @@ header {
 
   .main {
       height: 80vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px;
   }
 
   .main-text {
-      width: 50%;
       padding: 30px;
+      margin-bottom: 100px;
   }
 
   .square {
@@ -118,15 +123,177 @@ header {
       background-color: rgb(71, 71, 71);
   }
 
+    #one {
+      background-image: url("");
+      background-size: cover;
+    }
+
+    #two {
+    background-image: url("");
+    background-size: cover;
+    }
+
+    #three {
+    background-image: url("");
+    background-size: cover;
+    }
+
+    #four {
+    background-image: url("");
+    background-size: cover;
+    }
+
   .sub-section {
       display: flex;
       flex-wrap: wrap;
   }
 
+  .hero-image {
+      position: relative;
+      width: 50%;
+      height: 350px;
+      display: block;
+      margin-bottom: 100px;
+  }
+
+  .cube {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      /* background-color: pink; */
+      transform: rotate(-25deg) skew(25deg);
+  }
+
+  .cube:before {
+      position: absolute;
+      content: "";
+      width: 21px;
+      height: 100%;
+      /* background-color: blue; */
+      transform: skewY(-45deg);
+      left: -20px;
+      bottom: -10px;
+  }
+
+  .cube:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 21px;
+    /* background-color: red; */
+    transform: skewX(-45deg);
+    left: -10px;
+    bottom: -20px;
+}
+
+#html {
+    left: 100px;
+    bottom: 80px;
+    background-image: url("images/html-square.png");
+    background-size: cover;
+    background-color: rgb(204, 74, 51);
+    box-shadow: -60px 60px 20px rgb(50 50 50/ 15%);
+    }
+
+    .dark #html {
+        box-shadow: -60px 60px 20px rgb(255 255 255/ 15%);
+    }
+
+    #html:before {
+    background-color: rgb(192, 107, 96);
+}
+#html:after {
+    background-color: rgb(230, 132, 132);
+}
+
+    #css {
+        left: 250px;
+        bottom: 240px;
+        background-image: url("images/css-square.png");
+        background-size: cover;
+        background-color: rgb(41, 28, 161);
+        box-shadow: -60px 60px 20px rgb(50 50 50/ 15%);
+    }
+
+    .dark #css {
+        box-shadow: -60px 60px 20px rgb(255 255 255/ 15%);
+    }
+
+    #css:before {
+        background-color: rgb(74, 83, 206);
+    }
+
+    #css:after {
+        background-color: rgb(122, 112, 218);
+    }
+
+    #javascript {
+        left: 400px;
+        bottom: 80px;
+        background-image: url("images/javascript-square.png");
+        background-size: cover;
+        background-color: rgb(71, 165, 103);
+        box-shadow: -60px 60px 20px rgb(50 50 50/ 15%);
+    }
+
+    .dark #javascript {
+        box-shadow: -60px 60px 20px rgb(255 255 255/ 15%);
+    }
+
+    #javascript:before {
+        background-color: rgb(100, 175, 118);
+    }
+
+    #javascript:after {
+        background-color: rgb(150, 233, 161);
+    }
+
+    #react {
+        left: 250px;
+        bottom: -80px;
+        background-image: url("images/react-square.png");
+        background-size: cover;
+        background-color: rgb(159, 179, 48);
+        box-shadow: -60px 60px 20px rgb(50 50 50/ 15%);
+    }
+
+    .dark #react {
+        box-shadow: -60px 60px 20px rgb(255 255 255/ 15%);
+    }
+
+    #react:before {
+        background-color: rgb(141, 158, 45);
+    }
+
+    #react:after {
+        background-color: rgb(199, 211, 92);
+    }
+
+
+  footer {
+      display: flex;
+      justify-content: center;
+      padding: 100px 30px;
+      background-color: rgb(136, 136, 136);
+  }
+
+  .dark footer {
+    background-color: rgb(28, 28, 28);
+  }
+
   @media only screen and (min-width: 970px) {
+      .main-text {
+          width: 50%;
+      }
       .square {
           width: 48%;
           margin: 1%;
           height: 600px;
+      }
+  }
+
+  @media only screen and (max-width: 1300px) {
+      .hero-image {
+          display: none;
       }
   }
